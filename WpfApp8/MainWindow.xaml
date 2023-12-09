@@ -1,0 +1,23 @@
+﻿<Window x:Class="WpfApp8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="590" Width="800" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen">
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Frame NavigationUIVisibility="Hidden" Grid.Row="1" Name="Site"></Frame>
+        <StackPanel Orientation="Horizontal">
+            <Button Click="A_Click" Margin="10 0 0 0" Width="70" Height="35">Назад</Button>
+            <TextBlock FontWeight="Bold" Foreground="White" Margin="20 0 0 0" FontSize="30">MARATHON SKILLS 2016</TextBlock>
+        </StackPanel>
+        <Button Click="B_Click" Margin="0 0 10 0" HorizontalAlignment="Right" Width="70" Height="35">Logout</Button>
+        <TextBlock Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Grid.Row="2">18 дней 8 часов и 17 минут до старта марафона!</TextBlock>
+    </Grid>
+</Window>
