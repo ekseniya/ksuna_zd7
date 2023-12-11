@@ -16,27 +16,18 @@ using System.Windows.Shapes;
 namespace WpfApp8
 {
     /// <summary>
-    /// Логика взаимодействия для glavnoe.xaml
+    /// Логика взаимодействия для spsxaml.xaml
     /// </summary>
-    public partial class glavnoe : Page
+    public partial class spsxaml : Page
     {
-        public glavnoe()
+        public spsxaml()
         {
             InitializeComponent();
-        }
-        private void a_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new sel());
-        }
-
-        private void Lo_Click(object sender, RoutedEventArgs e)
-        {
-            NavigationService.Navigate(new l());
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new sponsor());
+            NavigationService.Navigate(new glavnoe());
         }
     }
 }

@@ -33,5 +33,10 @@ namespace WpfApp8
         {
             NavigationService.Navigate(new subs());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new my_spon());
+        }
     }
 }
