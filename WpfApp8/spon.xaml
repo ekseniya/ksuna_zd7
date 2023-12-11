@@ -1,0 +1,53 @@
+﻿<Window x:Class="WpfApp8.spon"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="spon" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Text="Спонсор бегуна" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" Foreground="Gray"/>
+        <TextBlock Text="Пожалуйста выберите бегуна, которого вы отели бы спонсировать и сумму,
+которую вы хотели бы спонсировать. Спасибо за вашу поддержку бегунов и их
+благотворительных учреждений." Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Grid.Row="1" Foreground="Gray"/>
+        <TextBlock Text="Информация о Спонсоре" Grid.Column="0" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Grid.ColumnSpan="1" Foreground="Gray" />
+        <TextBlock Text="Благотворительность" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="17" Grid.ColumnSpan="1"/>
+        <TextBlock Text="Фонд Кошек" Grid.Column="1" Grid.Row="3" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="17" Grid.ColumnSpan="1">
+        <StackPanel x:Name="stackpanel"/>
+        </TextBlock>
+        <CheckBox x:Name="checkbox1" IsThreeState="True" IsChecked="False" Grid.Column="1" Grid.Row="3" Margin="364,0,10,0" Height="20" VerticalAlignment="Center"/>
+        <TextBlock Text="Ваше имя:" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Left" FontSize="14" Grid.ColumnSpan="1" Margin="23,0,0,0"/>
+        <TextBlock Text="Бегун:" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" Grid.ColumnSpan="1" Margin="50,5,0,0"/>
+        <TextBlock Text="Карта:" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" FontSize="14" Grid.ColumnSpan="1" Margin="50,5,0,0"/>
+        <TextBlock Text="Номер карты#:" Grid.Column="0" Grid.Row="7" HorizontalAlignment="Left" FontSize="14" Grid.ColumnSpan="1" VerticalAlignment="Center"/>
+        <TextBlock Text="Срок действия:" Grid.Column="0" Grid.Row="8" HorizontalAlignment="Left" FontSize="14" Grid.ColumnSpan="1" VerticalAlignment="Center"/>
+        <TextBlock Text="CVC:" Grid.Column="0" Grid.Row="9" HorizontalAlignment="Left" FontSize="14" Grid.ColumnSpan="1" Margin="68,0,0,0"  />
+        <TextBlock Text="Сумма пожертвования" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Center" FontSize="15" Grid.ColumnSpan="1" Foreground="Gray"/>
+        <TextBlock Text="$50" Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" FontSize="50" Grid.ColumnSpan="1" Grid.RowSpan="2" Foreground="Gray"/>
+        <TextBox LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" Grid.Column="0" Grid.Row="4" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" FontSize="14" Foreground="DarkGray" Tag="Ваше имя" Margin="100,0,0,0" Width="290">Ваше имя</TextBox>
+        <TextBox LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" Grid.Column="0" Grid.Row="5" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" FontSize="14" Foreground="DarkGray" Tag="Бегун" Margin="100,0,0,0" Width="290">Иван Прудов - 204 (Russia)</TextBox>
+        <TextBox LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" Grid.Column="0" Grid.Row="6" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" FontSize="14" Foreground="DarkGray" Tag="Карта" Margin="100,0,0,0" Width="290">Владелец карты</TextBox>
+        <TextBox LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" Grid.Column="0" Grid.Row="7" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" FontSize="14" Foreground="DarkGray" Tag="Номер карты" Margin="100,0,0,0" Width="290">1234 1234 1234 1234</TextBox>
+        <TextBox LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" Grid.Column="0" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" FontSize="14" Foreground="DarkGray" Tag="Срок действия" Margin="100,0,0,0" Width="25">01</TextBox>
+        <TextBox LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" Grid.Column="0" Grid.Row="8" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" FontSize="14" Foreground="DarkGray" Tag="Срок действия" Margin="130,0,0,0" Width="40">2017</TextBox>
+        <TextBox LostFocus="TextBox_LostFocus" GotFocus="TextBox_GotFocus" Grid.Column="0" Grid.Row="9" VerticalAlignment="Center" HorizontalAlignment="Left" Height="25" FontSize="14" Foreground="DarkGray" Tag="CVC" Margin="100,0,0,0" Width="40">123</TextBox>
+    </Grid>
+</Window>
